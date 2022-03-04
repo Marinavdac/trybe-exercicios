@@ -1,0 +1,41 @@
+* {
+  text-decoration: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h3 {
+  text-align: center;
+  margin: 1.5rem;
+}
+
+.prize {
+  display: inline-block;
+  width: fit-content;
+  
+}
+
+.team{
+    margin-left: 24rem;
+    
+}
+
+.first {
+  margin-top: 3rem;
+  margin-left: 36rem;
+  display: block;
+  height: 3rem;
+  width: 14rem;
+}
+
+.second,
+.third {
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.second {
+  margin-left: 24rem;
+}
