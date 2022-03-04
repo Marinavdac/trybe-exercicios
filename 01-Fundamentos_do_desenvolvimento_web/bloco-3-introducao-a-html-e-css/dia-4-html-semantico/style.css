@@ -25,24 +25,28 @@ h1 {
 }
 
 h2 {
-  text-align: center;
-  padding: 1rem;
   color: yellow;
   text-shadow: 0.2rem 0.1rem black;
 }
+.text-container {
+  text-align: center;
+  line-height: 2rem;
+  padding: 1rem;
+  margin: 1rem;
+}
 
 .navbar {
-    background-color: white;
-    border: 0.4rem solid red;
+  background-color: white;
+  border: 0.4rem solid red;
   display: flex;
   justify-content: space-evenly;
   padding: 1rem;
   margin: 2rem;
-  color:red;
+  color: red;
 }
 
 .nav-links a {
-  color:red;
+  color: red;
 }
 
 .nav-links:hover {
@@ -57,25 +61,43 @@ h2 {
 }
 
 table {
-  width: 80%;
+  width: 100%;
   margin: auto;
   align-items: flex-end;
 }
 
 .main {
-  border-radius: 0.2rem;
-  border: 0.4rem solid black;
-  background-color: white;
   width: 80%;
   margin: auto;
   height: fit-content;
   padding: 0 0 2rem 0;
 }
 
+section {
+  border-radius: 0.2rem;
+  border: 0.4rem solid black;
+  background-color: white;
+}
+
+.container-left{
+    border: 0.4rem solid red;
+}
+
 img {
   width: 100%;
   padding: auto;
+  border-radius: 50%;
+  border: 0.3rem solid red;
 }
-.facts {
+
+.card {
+  width: 100%;
+  display: flex;
+  flex: 2;
+  justify-content: space-around;
+  align-items: center;
+}
+section {
+  margin: 2rem;
   padding: 1rem;
 }
