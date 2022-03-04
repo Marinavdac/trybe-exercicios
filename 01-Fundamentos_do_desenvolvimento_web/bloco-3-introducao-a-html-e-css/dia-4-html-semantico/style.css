@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', 'sans-serif';
+    list-style: none;
+    text-decoration: none;
+    
+}
+
+h1{
+text-align: center;
+padding: 1rem;
+color: gray;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1rem;
+    color: gray;
+}
+.nav-links a{
+    color: grey;
+}
+
+.nav-links:hover{
+    text-decoration:underline;
+    text-decoration-color: red;
+    text-decoration-thickness: 3px;
+    
+}
+
+table{
+    max-width: 50%;
+}
+
+.nav
