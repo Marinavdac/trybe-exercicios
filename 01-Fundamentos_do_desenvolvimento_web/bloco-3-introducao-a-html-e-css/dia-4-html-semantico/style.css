@@ -101,3 +101,9 @@ section {
   margin: 2rem;
   padding: 1rem;
 }
+iframe{
+    margin: auto;
+    align-self: center;
+    width: 41.875rem; 
+    height: 23.563rem;
+}
