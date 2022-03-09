@@ -93,22 +93,62 @@ if (isTriangle === triangle) {
 // Exemplo: bishop (bispo) -> diagonals (diagonais)
 
 
+let piece = "Queen";
+let chessPiece = piece.toLowerCase();
 
-let chessPiece = '';
 
 if (!chessPiece){ 
     console.log("Please pick a piece")
-} else if (chessPiece.toLowerCase() === 'paw') {
+} else if (chessPiece === 'paw') {
     console.log("move one square forward")
-} else if (chessPiece.toLowerCase() === 'king') {
+} else if (chessPiece === 'king') {
     console.log("move one square in any direction")
-} else if (chessPiece.toLowerCase() === 'bishop') {
+} else if (chessPiece === 'bishop') {
     console.log("move diagonally as many squares as you wish to")
-} else if (chessPiece.toLowerCase() === 'knight') {
+} else if (chessPiece === 'knight') {
     console.log("L-shape your way ahead (move one square left or right horizontally and then two squares up or down vertically, OR two squares left or right horizontally and then one square up or down vertically)")
-} else if (chessPiece.toLowerCase() === 'rook') {
+} else if (chessPiece === 'rook') {
     console.log("move vertically or horizontally as many squares as you wish to")
 } else if (chessPiece.toLowerCase() === 'queen') {
     console.log("move diagonally, vertically or horizontally as many squares as you wish to")
 } 
+
+
+// 7. Escreva um programa que converte uma nota dada em porcentagem (de 0 a 100) em conceitos de A a F. Siga essas regras:
+
+// Porcentagem >= 90 -> A
+// Porcentagem >= 80 -> B
+// Porcentagem >= 70 -> C
+// Porcentagem >= 60 -> D
+// Porcentagem >= 50 -> E
+// Porcentagem < 50 -> F
+// O programa deve retornar uma mensagem de erro e encerrar se a nota passada for menor que 0 ou maior que 100.
+
+
+
+let conceito;
+
+let nota;
+
+if (!nota || nota < 0 || nota > 100) {
+    console.log("A nota digitada não pode ser contabilizada.")
+} else if (nota >= 90) {
+    conceito = "A";
+} else if (nota >= 80) {
+    conceito = "B";
+} else if (nota >= 70) {
+    conceito = "C";
+} else if (nota >= 60) {
+    conceito = "D";
+} else if (nota >= 50) {
+    conceito = "E";
+} else if (nota < 50) {
+    conceito = "F";
+}
+
+console.log("o conceito da pessoa estudante foi " + conceito + ".");
+
+// 8. Escreva um programa que defina três números em constantes e retorne true se pelo menos uma das três for par. Caso contrário, ele retorna false .
+
+// Bonus: use somente um if .
 
