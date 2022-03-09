@@ -92,27 +92,28 @@ if (isTriangle === triangle) {
 // Se a peça passada for inválida, o programa deve retornar uma mensagem de erro.
 // Exemplo: bishop (bispo) -> diagonals (diagonais)
 
-
 let piece = "Queen";
 let chessPiece = piece.toLowerCase();
 
-
-if (!chessPiece){ 
-    console.log("Please pick a piece")
-} else if (chessPiece === 'paw') {
-    console.log("move one square forward")
-} else if (chessPiece === 'king') {
-    console.log("move one square in any direction")
-} else if (chessPiece === 'bishop') {
-    console.log("move diagonally as many squares as you wish to")
-} else if (chessPiece === 'knight') {
-    console.log("L-shape your way ahead (move one square left or right horizontally and then two squares up or down vertically, OR two squares left or right horizontally and then one square up or down vertically)")
-} else if (chessPiece === 'rook') {
-    console.log("move vertically or horizontally as many squares as you wish to")
-} else if (chessPiece.toLowerCase() === 'queen') {
-    console.log("move diagonally, vertically or horizontally as many squares as you wish to")
-} 
-
+if (!chessPiece) {
+  console.log("Please pick a piece");
+} else if (chessPiece === "paw") {
+  console.log("move one square forward");
+} else if (chessPiece === "king") {
+  console.log("move one square in any direction");
+} else if (chessPiece === "bishop") {
+  console.log("move diagonally as many squares as you wish to");
+} else if (chessPiece === "knight") {
+  console.log(
+    "L-shape your way ahead (move one square left or right horizontally and then two squares up or down vertically, OR two squares left or right horizontally and then one square up or down vertically)"
+  );
+} else if (chessPiece === "rook") {
+  console.log("move vertically or horizontally as many squares as you wish to");
+} else if (chessPiece.toLowerCase() === "queen") {
+  console.log(
+    "move diagonally, vertically or horizontally as many squares as you wish to"
+  );
+}
 
 // 7. Escreva um programa que converte uma nota dada em porcentagem (de 0 a 100) em conceitos de A a F. Siga essas regras:
 
@@ -124,26 +125,24 @@ if (!chessPiece){
 // Porcentagem < 50 -> F
 // O programa deve retornar uma mensagem de erro e encerrar se a nota passada for menor que 0 ou maior que 100.
 
-
-
 let conceito;
 
 let nota;
 
 if (!nota || nota < 0 || nota > 100) {
-    console.log("A nota digitada não pode ser contabilizada.")
+  console.log("A nota digitada não pode ser contabilizada.");
 } else if (nota >= 90) {
-    conceito = "A";
+  conceito = "A";
 } else if (nota >= 80) {
-    conceito = "B";
+  conceito = "B";
 } else if (nota >= 70) {
-    conceito = "C";
+  conceito = "C";
 } else if (nota >= 60) {
-    conceito = "D";
+  conceito = "D";
 } else if (nota >= 50) {
-    conceito = "E";
+  conceito = "E";
 } else if (nota < 50) {
-    conceito = "F";
+  conceito = "F";
 }
 
 console.log("o conceito da pessoa estudante foi " + conceito + ".");
@@ -152,3 +151,47 @@ console.log("o conceito da pessoa estudante foi " + conceito + ".");
 
 // Bonus: use somente um if .
 
+const numb1 = 1;
+const numb2 = 17;
+const numb3 = 4;
+
+numb1 % 2 === 0 || numb2 % 2 === 0 || numb3 % 2 === 0
+  ? console.log("true")
+  : console.log("false." + " Sorry, none of those numbers are even");
+
+// 9.
+// Escreva um programa que defina três números em constantes e retorne true se pelo menos uma das três for ímpar. Caso contrário, ele retorna false .
+
+// Bonus: use somente um if .
+
+const numbr1 = 2;
+const numbr2 = 4;
+const numbr3 = 12;
+
+if (!(numbr1 % 2 === 0) || !(numbr2 % 2 === 0) || !(numbr3 % 2 === 0)) {
+  console.log("true");
+} else {
+  console.log("false");
+}
+
+// 10. Escreva um programa que se inicie com dois valores em duas constantes diferentes: o custo de um produto e seu valor de venda. A partir dos valores, calcule quanto de lucro (valor de venda descontado o custo do produto) a empresa terá ao vender mil desses produtos.
+
+// Atente que, sobre o custo do produto, incide um imposto de 20%.
+// Seu programa também deve emitir uma mensagem de erro e encerrar caso algum dos seus valores de entrada seja menor que zero.
+
+// O lucro de um produto é o resultado da subtração do valor de venda pelo custo do mesmo, sendo que o imposto de 20% também faz parte do valor de custo.
+// valorCustoTotal = valorCusto + impostoSobreOCusto
+// lucro = valorVenda - valorCustoTotal (lucro de um produto)
+
+const valorCusto = 10;
+const impostoSobreOCusto = (20 * 100) / 100;
+const valorVenda = 50;
+
+let valorCustoTotal = valorCusto + impostoSobreOCusto;
+let lucro = valorVenda - valorCustoTotal;
+let bigSell = lucro * 1000;
+
+console.log(lucro);
+console.log(
+  "o lucro de uma venda de 1.000 itens é de $" + bigSell + ",00 dollars"
+);
