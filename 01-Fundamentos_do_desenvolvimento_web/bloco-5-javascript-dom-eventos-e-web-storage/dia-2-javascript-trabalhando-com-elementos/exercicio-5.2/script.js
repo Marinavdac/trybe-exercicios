@@ -61,6 +61,7 @@ for (let i = 0; i < lista.length; i += 1) {
   let itemDaLista = lista[i];
 
   let listItems = document.createElement("li");
+  listItems.className = "numberListItems";
   listItems.innerText = itemDaLista;
 
   unorderedList.appendChild(listItems);
@@ -81,10 +82,33 @@ createText("h3", "three h3");
 
 jsTitle.className = "title";
 
+// 11. Adicione a classe description nas 3 tags h3 criadas;
 let subtitle = document.querySelectorAll("h3");
 for (let h3Title of subtitle) {
   h3Title.className = "description";
 }
 
-// 11. Adicione a classe description nas 3 tags h3 criadas;
+// 12. Remova a section criado no passo 5 (aquele que possui a classe left-content ). Utilize a função .removeChild() ;
+
+main.removeChild(leftSection);
+
+// 13. Centralize a section criado no passo 6 (aquele que possui a classe right-content ). Dica: para centralizar, basta configurar o margin-right: auto da section ;
+
+let centralize = document.querySelector(".right-content");
+
+centralize.style.marginRight = "auto";
+
+// 14. Troque a cor de fundo do elemento pai da section criada no passo 3 (aquela que possui a classe center-content ) para a cor verde;
+
+sectionMain.style.backgroundColor = "green";
+
+// 15. Remova os dois últimos elementos ( nove e dez ) da lista criada no passo 8.
+let selectedList = document.querySelectorAll(".numberListItems");
+let listIndex = document.querySelector(".number-list");
+
+for (let i = selectedList.length-1; i > 7; i -= 1) {
+      let itemsLista = selectedList[i];
+    
+    listIndex.removeChild(itemsLista);
+}
 
