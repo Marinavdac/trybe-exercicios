@@ -58,23 +58,33 @@ righSection.appendChild(newList);
 let unorderedList = document.querySelector(".number-list");
 
 for (let i = 0; i < lista.length; i += 1) {
-    let itemDaLista = lista[i];
-       
-    let listItems = document.createElement("li");
-    listItems.innerText = itemDaLista;
+  let itemDaLista = lista[i];
 
-    unorderedList.appendChild(listItems);
+  let listItems = document.createElement("li");
+  listItems.innerText = itemDaLista;
+
+  unorderedList.appendChild(listItems);
 }
 
 // 9. Adicione 3 tags h3 , todas sendo filhas do main criado no passo 2.
 function createText(element, text) {
-    let newText = document.createElement(element);
-    newText.innerText = text;
-        main.appendChild(newText);
+  let newText = document.createElement(element);
+  newText.innerText = text;
+  main.appendChild(newText);
 }
- 
-createText('h3', 'one h3')
-createText('h3', 'two h3')
-createText('h3','three h3')
 
+createText("h3", "one h3");
+createText("h3", "two h3");
+createText("h3", "three h3");
+
+// 10. Adicione a classe title na tag h1 criada;
+
+jsTitle.className = "title";
+
+let subtitle = document.querySelectorAll("h3");
+for (let h3Title of subtitle) {
+  h3Title.className = "description";
+}
+
+// 11. Adicione a classe description nas 3 tags h3 criadas;
 
