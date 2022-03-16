@@ -66,5 +66,15 @@ for (let i = 0; i < lista.length; i += 1) {
     unorderedList.appendChild(listItems);
 }
 
-
 // 9. Adicione 3 tags h3 , todas sendo filhas do main criado no passo 2.
+function createText(element, text) {
+    let newText = document.createElement(element);
+    newText.innerText = text;
+        main.appendChild(newText);
+}
+ 
+createText('h3', 'one h3')
+createText('h3', 'two h3')
+createText('h3','three h3')
+
+
