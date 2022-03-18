@@ -112,3 +112,47 @@ for (let i = selectedList.length-1; i > 7; i -= 1) {
     listIndex.removeChild(itemsLista);
 }
 
+function generatePhoneNumber(numberArray) {
+    if (numberArray.length !== 11) return ("Array com tamanho incorreto.");
+  
+    let phoneNumber;
+  
+    for (let i = 0; i < numberArray.length; i += 1) {
+       if (numberArray[i] > 9 || numberArray[i] < 0) {
+        return "não é possível gerar um número de telefone com esses valores";
+       } else checksRepeated(numberArray)
+  
+      phoneNumber = "(" + numberArray[0] + numberArray[1] + ") " + numberArray[2] + numberArray[3] + numberArray[4] + numberArray[5] + numberArray[6] + "-" + numberArray[7] + numberArray[8] + numberArray[9] + numberArray[10];
+      return phoneNumber;
+    function checksRepeated(numberArray) {
+        let isRepeated = 0;
+        if (numberArray[i] === numberArray[i])
+        isRepeated += 1;
+      if (isRepeated > 2) {
+        return "não é possível gerar um número de telefone com esses valores"
+      }
+    }
+        
+    }
+    
+  }
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]))
+console.log(generatePhoneNumber([0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 4]))
+console.log(generatePhoneNumber([1, 2, 8, 0, 5, 3, 7, 8, 9, 1, 8]))
+console.log(generatePhoneNumber([1, 2, 2, 4, 5, 5, 2, 8, 9, 0, 1]))
+console.log(generatePhoneNumber([0, 2, 3, 4, 5, 7, 7, 8, 9, 0, 7]))
+
+
+console.log(generatePhoneNumber([0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 4]))
+         |                                                                               ^
+      console.log(generatePhoneNumber([1, 2, 8, 0, 5, 3, 7, 8, 9, 1, 8]))
+      console.log(generatePhoneNumber([1, 2, 2, 4, 5, 5, 2, 8, 9, 0, 1]))
+      console.log(generatePhoneNumber([0, 2, 3, 4, 5, 7, 7, 8, 9, 0, 7]))
+
+let array = [1, 2, 8, 0, 5, 3, 7, 8, 9, 1, 8];
+
+function findMatch(array) {
+    for (let i = 0; i < array.length; i += 1){
+        if (array[array.length + 1] === array[array.length + 2]
+    }
+      }

@@ -18,7 +18,7 @@ function addClass(aClass) {
 
 addClass('tech');
 
-console.log(firstLi);
+console.log(firstLi); >
 
 
 // 2.1. Deve existir apenas um elemento com a classe 'tech'. Como você faz isso?
@@ -48,3 +48,4 @@ firstLi.addEventListener('dblclick', resetText);
 // Não precisa passar o parâmetro dentro da callback resetText. O próprio
 // navegador fará esse trabalho por você, não é legal? Desse jeito, o
 // event.target na nossa função retornará o objeto 'firstLi'.
+
