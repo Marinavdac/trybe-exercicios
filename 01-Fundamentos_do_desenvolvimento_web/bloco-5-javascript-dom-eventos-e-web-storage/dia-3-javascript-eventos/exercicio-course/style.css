@@ -28,6 +28,7 @@ body {
     text-align: center;
     transition: all 0.25s ease;
     width: 200px;
+    cursor: pointer;
   }
   
   h1 {
