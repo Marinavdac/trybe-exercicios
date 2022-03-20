@@ -11,28 +11,24 @@ const myWebpage = document.getElementById("my-spotrybefy");
 
 // 2. Crie uma função que adicione a classe 'tech' ao elemento `li` quando for clicado.
 // 2.1. Deve existir apenas um elemento com a classe 'tech'. Como você faz isso?
-firstLi.addEventListener("click", addsClass);
-secondLi.addEventListener("click", addsClass);
-thirdLi.addEventListener("click", addsClass);
+function handleChangeTech(event) {
+  const techClass = document.querySelector('.tech');
+  techClass.classList.remove('tech');
+  event.target.classList.add('tech');
+  input.value = '';
+};
 
-function addsClass(event) {
-  event.target.classList.toggle("tech")
-  if (event.target === firstLi) {
-    secondLi.classList.remove('tech')
-    thirdLi.classList.remove('tech')
-  } else if (event.target === secondLi) {
-      firstLi.classList.remove('tech')
-      thirdLi.classList.remove('tech')
-    } else if (event.target === thirdLi) {
-      firstLi.classList.remove('tech')
-      secondLi.classList.remove('tech')
-  }
-}
-
-
-
+firstLi.addEventListener("click", handleChangeTech);
+secondLi.addEventListener("click", handleChangeTech);
+thirdLi.addEventListener("click", handleChangeTech);
 // 3. Crie uma função que, ao digitar na caixa de texto, altere o texto do elemento
 // com a classe 'tech';
+// input.addEventListener("keypress", changeText);
+input.addEventListener('input', function (event) {
+  const techElement = document.querySelector('.tech');
+  techElement.innerText = event.target.value;
+});
+
 
 // 4. Crie uma função que, ao clicar duas vezes em 'Meu top 3 do Spotrybefy', ele
 // redirecione para alguma página;
@@ -51,6 +47,8 @@ function resetText(event) {
 }
 
 firstLi.addEventListener("dblclick", resetText);
+secondLi.addEventListener("dblclick", resetText);
+thirdLi.addEventListener("dblclick", resetText);
 
 // Não precisa passar o parâmetro dentro da callback resetText. O próprio
 // navegador fará esse trabalho por você, não é legal? Desse jeito, o
