@@ -34,8 +34,19 @@ input.addEventListener('input', function (event) {
 // redirecione para alguma página;
 // 4.1. Que tal redirecionar para seu portfólio?
 
+myWebpage.addEventListener('dblclick', function pageOpener(event) {
+  window.location.href = "https://marinavdac.github.io/portfolio/";
+})
+
 // 5. Crie uma função que, ao passar o mouse sobre 'Meu top 3 do Spotrybefy', altere
 // a cor do mesmo;
+
+myWebpage.addEventListener('mouseover', function (event) {
+  event.target.style.color = 'darkgreen';
+});
+myWebpage.addEventListener('mouseout', function (event) {
+  event.target.style.color = 'unset';
+});
 
 // Segue abaixo um exemplo do uso de event.target:
 
@@ -53,3 +64,5 @@ thirdLi.addEventListener("dblclick", resetText);
 // Não precisa passar o parâmetro dentro da callback resetText. O próprio
 // navegador fará esse trabalho por você, não é legal? Desse jeito, o
 // event.target na nossa função retornará o objeto 'firstLi'.
+
+

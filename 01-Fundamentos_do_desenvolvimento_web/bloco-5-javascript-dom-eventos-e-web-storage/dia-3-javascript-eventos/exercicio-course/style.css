@@ -35,6 +35,9 @@ body {
     font-size: 48px;
     color: #2fc18c;
   }
+  #my-spotrybefy{
+    cursor: pointer;
+  }
   
   .container li:nth-of-type(1) {
     background-color: #2fc18c;
