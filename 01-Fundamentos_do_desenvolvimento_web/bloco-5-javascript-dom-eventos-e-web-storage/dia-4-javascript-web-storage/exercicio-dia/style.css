@@ -1,7 +1,25 @@
-.page {
-    display: flex;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
+
+.page {
+  display: flex;
+    
+}
+
 .font-size {
-    display: flex;
-    text-align: center;
+  display: flex;
+  text-align: center;
+}
+
+#colors {
+  height: fit-content;
+  align-self: center;
+}
+
+#text {
+  padding: 2rem;
+
 }
