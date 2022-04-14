@@ -61,9 +61,6 @@ const books = [
     },
   ];
   
-  console.log(books.forEach(element => {
-      
-  });)
   // Adicione o código do exercício aqui:
 
   // 2 - Crie uma string com os nomes de todas as pessoas autoras.
@@ -98,3 +95,10 @@ function averageAge() {
 }
 
 console.log(averageAge(books))
+
+function getBiggest(array) {
+const biggestTitle = array.reduce((acc, book) => (acc.length < book.name.length) ? acc = book.name : acc, '')
+    return biggestTitle;
+}
+
+console.log(getBiggest(books));
