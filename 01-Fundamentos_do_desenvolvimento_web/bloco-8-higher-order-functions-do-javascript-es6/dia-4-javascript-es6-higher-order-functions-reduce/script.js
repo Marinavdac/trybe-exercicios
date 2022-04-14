@@ -136,8 +136,30 @@ const estudantes = [
   //relatório para dizer em que matéria cada aluno é melhor
 
 //1) pegar todos os alunos
+//gabarito:
+// const getBestClass = (acc, materia) => {
+//   if (acc.nota > materia.nota) return acc;
+//   return materia;
+// };
 
-const soAlunos = estudantes.map((estudante) => console.log(estudante.nome)) 
+// const reportBetter = (students) => students.map((student) => ({
+//   name: student.nome,
+//   materia: student.materias.reduce(getBestClass).name}));
+
+// console.log(reportBetter(estudantes));
+
+const soAlunos = estudantes.map((estudante) => console.log(estudante.nome))
+
+const getBestGrade = (acc, materia) => {
+  if (acc.nota > materia.nota) return acc;
+  return materia
+}
 
 const soMath = estudantes.map((estudante) => console.log(estudante.nome, estudante.materias[0])) 
 
+const report = (estudantes) => estudantes.map((estudante) => ({
+  name: estudante.nome,
+  materia: estudante.materias.reduce(getBestGrade).name,
+}))
+
+console.log(report(estudantes))
