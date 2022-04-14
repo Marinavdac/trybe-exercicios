@@ -97,7 +97,7 @@ function averageAge() {
 console.log(averageAge(books))
 
 function getBiggest(array) {
-const biggestTitle = array.reduce((acc, book) => (acc.length < book.name.length) ? acc = book.name : acc, '')
+const biggestTitle = array.reduce((acc, book) => (acc.length < book.name.length) ? acc = book.name : acc)
     return biggestTitle;
 }
 
