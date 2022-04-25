@@ -35,3 +35,5 @@ button.addEventListener("click", sum);
 
 // 3 - Você se lembrou de limpar os inputs após o clique do botão? Teve que repetir código para isso? Que tal refatorar sua
 //função utilizando o finally.
+let sum = 5.10 + 6.55;
+console.log(sum)

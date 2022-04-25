@@ -35,18 +35,20 @@ const order = {
   };
   
   const customerInfo = (order) => {
-      return console.log(`Olá, ${order.order.delivery.deliveryPerson}! Entrega para ${order.name}, Telefone: ${order.phoneNumber}, ${order.address.street}, Nº${order.address.number}, Apto: ${order.address.apartment}.`);
+      return `Olá, ${order.order.delivery.deliveryPerson}! Entrega para ${order.name}, Telefone: ${order.phoneNumber}, ${order.address.street}, Nº${order.address.number}, Apto: ${order.address.apartment}.`;
   
   }
   
-  customerInfo(order);
+  console.log(customerInfo(order));
   
   const orderModifier = (order) => {
-    // Adicione abaixo as informações necessárias.
+    return `Olá, ${order['name']}, o total do seu pedido de ${order.order.marguerita}, e ${order.order.drinks[0]} é R$ ${order.payment[0]}.`
   
   }
+
+  console.log(order.order.pizza['1'])
   
-orderModifier(order);
+console.log(orderModifier(order));
   
 
 // Complete a função customerInfo() para que seu retorno seja similar a "Olá Ana Silveira, entrega para: Rafael Andrade, Telefone: 11-98763-1416, R. Rua das Flores, Nº: 389, AP: 701".
