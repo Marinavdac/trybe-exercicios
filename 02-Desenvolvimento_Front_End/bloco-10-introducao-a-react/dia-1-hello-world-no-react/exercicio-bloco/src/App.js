@@ -1,6 +1,3 @@
-import logo from './logo.svg';
-import './App.css';
-
 const toDo = ['estudar React', 'fazer exercícios do dia', 'refazer projetos passados', 'estudar Typescript']
 
 const Task = (value) => {
