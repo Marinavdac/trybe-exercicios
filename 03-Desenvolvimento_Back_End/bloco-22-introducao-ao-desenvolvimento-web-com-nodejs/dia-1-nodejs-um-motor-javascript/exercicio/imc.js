@@ -1,6 +1,5 @@
 const readLine = require('readline-sync');
 
-
 const altura = readLine.questionFloat("Digite a sua altura :")
 const peso = readLine.questionFloat("Digite o seu peso :")
 
@@ -9,7 +8,6 @@ const medida = imc(altura, peso).toFixed(1);
 
 console.log(`Você possui um IMC de: ${medida}`);
 getImcCassification(medida);
-
 
 function getImcCassification(medida) {
   if (medida >= 40.0) {
